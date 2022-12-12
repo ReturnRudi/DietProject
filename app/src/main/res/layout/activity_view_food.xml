@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View_food">
+
+
+    <TextView
+        android:id="@+id/tv_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="음식 이미지"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/payboocfont"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="음식 이름: "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_food"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_num"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_upload"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/payboocfont"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="음식 수량: "
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        app:layout_constraintBottom_toTopOf="@+id/tv_review"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/payboocfont"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tv_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="소감: "
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num"
+        app:layout_constraintBottom_toTopOf="@+id/tv_time"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/payboocfont"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tv_totalkcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="총 칼로리: "
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_review"
+        app:layout_constraintBottom_toTopOf="@+id/tv_time"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/payboocfont"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_totalkcal_view"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="총 칼로리 표시"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_totalkcal"
+        app:layout_constraintTop_toTopOf="@+id/tv_totalkcal"
+        android:fontFamily="@font/payboocfont"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="식사 시간: "
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_review"
+        app:layout_constraintBottom_toTopOf="@+id/tv_location"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="@font/payboocfont"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="식사 장소: "
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="150dp"
+        android:fontFamily="@font/payboocfont"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tv_name_view"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_name"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+        android:text="음식 이름 표시"
+        android:textSize="20sp"
+        android:fontFamily="@font/payboocfont"
+        />
+
+    <TextView
+        android:id="@+id/tv_num_view"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/tv_num"
+        app:layout_constraintTop_toTopOf="@+id/tv_num"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_num"
+        android:textSize="20sp"
+        android:fontFamily="@font/payboocfont"
+        />
+
+    <TextView
+        android:id="@+id/tv_kcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="칼로리: "
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_num_view"
+        app:layout_constraintTop_toTopOf="@+id/tv_num_view"
+        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/payboocfont"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tv_kcal_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="칼로리 표시"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_kcal"
+        app:layout_constraintTop_toTopOf="@+id/tv_kcal"
+        android:fontFamily="@font/payboocfont"
+        />
+
+    <TextView
+        android:id="@+id/tv_date_view"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/tv_time"
+        app:layout_constraintTop_toTopOf="@+id/tv_time"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+        android:text="날짜 표시"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="@font/payboocfont"
+        />
+
+    <TextView
+        android:id="@+id/tv_time_view"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_date_view"
+        app:layout_constraintLeft_toLeftOf="@id/tv_date_view"
+        android:text="시간 표시"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/payboocfont"
+        />
+
+    <TextView
+        android:id="@+id/tv_location_view"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="@+id/tv_location"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_location"
+        android:text="위치 확인 (터치)"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/payboocfont"
+        />
+
+    <TextView
+        android:id="@+id/tv_review_view"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="소감 표시"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_review"
+        app:layout_constraintTop_toTopOf="@+id/tv_review"
+        android:fontFamily="@font/payboocfont"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_food"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_upload"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/tv_name"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
